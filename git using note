@@ -1,1 +1,32 @@
+操作1：git add readme.txt
+问题：fatal: pathspec 'readme.txt' did not match any files
+解决：先touch readme.txt 即新建readme.txt 文件，否则该文件都还没被创建，不能被添加到暂存区
+     再git add readme.txt
 
+操作2：git commit readme.txt
+问题：命令有误
+解决： git commit -m 'readme.txt'
+
+操作3： git commit -m 'readme.txt'
+问题： Unable to create 'D:/github/testgit/.git/index.lock': File exists.
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+解决：在项目根目录下找到 .git 文件夹。打开该文件夹。找到文件夹里面的index.lock 文件，将其删除，即可解决问题（如果提示不能删除文件，就重启系统）
+要想删除文件，应该使用命令：rm index.lock 然后 git commit 提交
+
+
+操作4：返回上一级目录
+问题：如何返回上一级目录？
+解决：输入命令 cd ..
+
+操作5：寻找.ssh文件并检查
+问题：输入ssh代码后，找不到文件？
+解决：在命令行所给提示中有路径
+
+操作6：在c/目录下进行git remote add origin https://github.com/JosephHihi/testgit.git
+关联本地和远端
+问题：fatal: not a git repository (or any of the parent directories): .git
+解决：更换目录，切换到本地库目录
