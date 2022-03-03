@@ -30,3 +30,11 @@ remove the file manually to continue.
 关联本地和远端
 问题：fatal: not a git repository (or any of the parent directories): .git
 解决：更换目录，切换到本地库目录
+
+操作7：$ git push -u origin master
+问题：跳出的窗口无登陆密码框，而是提示：connect to Github sign in with your brower
+解决：（1）关闭含有信息：connect to Github sign in with your brower的弹出框
+（2）此时出现一个ssh弹出框，显示：
+‘https://github.com’: 输入的是github上的邮箱账号, 而不是github中设置的username
+Password for ‘https://你的github邮箱@github.com’: 输入github的登录密码,点击enter键即可
+（3）此时命令行中显示进程和百分比完成度等多行信息
